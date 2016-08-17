@@ -7,9 +7,12 @@
 select
   c.FirstName,
   c.LastName,
+  c.Country
   i.InvoiceId,
   i.InvoiceDate,
-  c.Country
-from Customer c, Invoice i
-where c.CustomerId = i.CustomerId
-and c.Country = 'Brazil';
+from
+  Customer c, Invoice i
+where
+  c.CustomerId = i.CustomerId
+and
+  c.Country = 'Brazil';
